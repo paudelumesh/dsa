@@ -83,5 +83,53 @@ public class Graph {
         }
         
     }
+    
+    public boolean isCyclicUtil(int s, boolean [] visited, boolean []recVisited)
+    {
+        
+        visited[s]=true;
+        recVisited[s]=true;
+        
+        Iterator<Integer> itr=adjList[s].listIterator();
+        
+        while(itr.hasNext())
+        {
+           int n=itr.next();
+           
+           if(!visited[n]&&isCyclicUtil(n,visited,recVisited))
+           {
+               return true;
+           }
+           else if(recVisited[n])
+           {
+               return true;
+           }
+        }
+        
+        return false;
+    }
+    
+    public boolean isCyclic()
+    {
+        boolean []visited=new boolean[this.V];
+        boolean []recVisited=new boolean[this.V];
+        
+       for(int i=0;i<this.V;i++)
+       {
+           visited[i]=false;
+           recVisited[i]=false;
+       }
+       
+       for(int i=0;i<this.V;i++)
+       {
+           if (isCyclicUtil(i,visited,recVisited))
+           {
+               return true;
+           }
+           
+       }
+       
+       return false;
+    }
 
 }
