@@ -1,15 +1,15 @@
 # Data Structure Algorithms
 Data Structure Algorithms Practice
 
-1. Graphs
-## Graph Representations
-    Edges List
-    Adjacency Matrix
-    Adjacency List
+## Graphs
+### Graph Representations
+    * Edges List
+    * Adjacency Matrix
+    * Adjacency List
 
 
-2. Trees
+## Trees
 
-3. Sorting
+## Sorting
 
-4. Queues and Stacks
+## Queues and Stacks
