@@ -131,6 +131,15 @@ public class BinaryTree<T> {
         
     }
     
+    public Node<T> delete(int key)
+    {
+        Node<T> current=root;
+        
+        
+        
+        return null;
+    }
+    
 }
 
 
