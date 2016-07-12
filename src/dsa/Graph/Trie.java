@@ -66,6 +66,9 @@ public class Trie {
 
         current.endNode = true;
     }
+    
+    
+    
 
     public static void main(String[] args) {
 
