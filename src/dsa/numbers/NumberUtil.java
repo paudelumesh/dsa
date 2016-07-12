@@ -42,9 +42,6 @@ public class NumberUtil {
                 }
 
             }
-        }
-
-        for (int i = 0; i < primeTable.length; i++) {
             if (primeTable[i]) {
                 primes.add(i);
             }
