@@ -113,6 +113,29 @@ public class LRU {
     
     public void set(int key,int val)
     {
+        if(cacheMap.containsKey(key))
+        {
+            Node old=cacheMap.get(key);
+            old.value=val;
+            remove(old);
+            setHead(old);
+        }
+        else
+        {
+            Node newNode=new Node(key,val);
+            if(cacheMap.size()>=capacity)
+            {
+               cacheMap.remove(end.key);
+               remove(end);
+                setHead(newNode);
+            }
+            else
+            {
+                
+                setHead(newNode);
+            }
+            cacheMap.put(key, newNode);
+        }
         
     }
     
