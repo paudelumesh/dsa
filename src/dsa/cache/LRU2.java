@@ -5,6 +5,7 @@
  */
 package dsa.cache;
 
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 
 /**
@@ -28,6 +29,16 @@ public class LRU2 extends LinkedHashMap<Integer,Integer> {
         return this.size()>this.capacity;
     }
     
+    
+    public void display()
+    {
+        Iterator itr=this.values().iterator();
+        while(itr.hasNext())
+        {
+            Integer i=(Integer)itr.next();
+            System.out.print(i+ " ");
+        }
+    }
     
     
 }

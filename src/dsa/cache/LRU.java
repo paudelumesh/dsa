@@ -6,6 +6,7 @@
 package dsa.cache;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -94,6 +95,10 @@ public class LRU {
         
     }
     
+    public int get()
+    {
+        return get(end.key);
+    }
     
     public int get(int key)
     {
@@ -137,6 +142,16 @@ public class LRU {
             cacheMap.put(key, newNode);
         }
         
+    }
+    
+    public void display()
+    {
+        Iterator itr=cacheMap.values().iterator();
+        while(itr.hasNext())
+        {
+            Node n=(Node)itr.next();
+            System.out.print(n.value+ " ");
+        }
     }
     
     
